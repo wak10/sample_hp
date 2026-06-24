@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1568D8; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #14253D; background: #FFFFFF; overflow-x: hidden;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <header data-screen-label="Recruit Hero" style="background: #F4F7FA; padding: 150px 44px 90px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #8195A8; margin-bottom: 34px;">
+        <a href="むすび%20コーポレートサイト.dc.html" style="color: #8195A8; text-decoration: none;" style-hover="color: #1568D8;">HOME</a>
+        <span>/</span>
+        <span style="color: #14253D;">採用情報</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">RECRUIT</span>
+      </div>
+      <h1 style="font-size: clamp(34px, 5.4vw, 76px); font-weight: 900; line-height: 1.3; letter-spacing: 0.01em;">
+        <span style="color: #14253D;">本質に向き合う仲間を、</span><br>
+        <span style="color: #1568D8;">募集しています。</span>
+      </h1>
+      <p style="font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; line-height: 2; color: #5C6B7A; max-width: 680px; margin-top: 28px;">むすびは少人数のチームです。役割の境界を越えて、戦略からものづくりまで一緒に向き合える仲間を探しています。</p>
+    </div>
+  </header>
+
+  <!-- IMAGE BAND -->
+  <section style="padding: 0 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="height: clamp(260px, 34vw, 480px); border-radius: 22px; background-color: #EAF0F7; background-image: repeating-linear-gradient(135deg, rgba(21,104,216,0.06) 0 1px, transparent 1px 14px); display: flex; align-items: center; justify-content: center; margin-top: -10px;">
+      <span style="font-size: 13px; font-weight: 500; color: #8195A8; background: rgba(255,255,255,0.9); padding: 9px 18px; border-radius: 100px;">[ チーム / オフィスの写真 ]</span>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section style="padding: 100px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+      <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+      <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">CULTURE</span>
+    </div>
+    <h2 style="font-size: clamp(28px, 3.6vw, 46px); font-weight: 900; margin-bottom: 50px;">むすびで働くということ</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <sc-for list="{{ culture }}" as="c" hint-placeholder-count="3">
+        <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 18px; padding: 40px 36px;">
+          <div style="font-size: 26px; font-weight: 900; color: #1568D8; margin-bottom: 16px;">{{ c.no }}</div>
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px;">{{ c.title }}</h3>
+          <p style="font-size: 15px; line-height: 1.95; color: #5C6B7A;">{{ c.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- POSITIONS -->
+  <section style="background: #F4F7FA; padding: 100px 44px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">POSITIONS</span>
+      </div>
+      <h2 style="font-size: clamp(28px, 3.6vw, 46px); font-weight: 900; margin-bottom: 44px;">募集職種</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="4">
+          <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 30px 34px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <h3 style="font-size: 20px; font-weight: 700;">{{ j.title }}</h3>
+                <span style="font-size: 11px; font-weight: 700; color: #1568D8; background: #EAF1FB; border-radius: 100px; padding: 5px 12px;">{{ j.type }}</span>
+              </div>
+              <p style="font-size: 14px; color: #5C6B7A; line-height: 1.8;">{{ j.desc }}</p>
+            </div>
+            <a href="contact.dc.html" style="flex: none; text-decoration: none; color: #1568D8; border: 1.5px solid #1568D8; font-size: 14px; font-weight: 700; padding: 12px 28px; border-radius: 100px; transition: background 0.2s, color 0.2s;" style-hover="background: #1568D8; color: #FFFFFF;">詳細を見る →</a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section style="padding: 100px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 44px;">
+      <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+      <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">BENEFITS</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+        <div style="border: 1px solid #E3E9F0; border-radius: 16px; padding: 30px 26px;">
+          <div style="font-size: 15px; font-weight: 700; line-height: 1.7;">{{ b }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <dc-import name="SiteCTA" hint-size="100%,520px"></dc-import>
+  <dc-import name="SiteFooter" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      culture: [
+        { no: "01", title: "境界を越える", desc: "職種で線を引きません。戦略・デザイン・開発を横断し、プロジェクト全体に責任を持って関わります。" },
+        { no: "02", title: "本質を問う", desc: "言われたものをつくるのではなく、なぜそれをつくるのかを問い続ける。思考を止めない姿勢を大切にします。" },
+        { no: "03", title: "長く、深く", desc: "短期的な成果よりも、10年先も愛されるものづくりを。クライアントとも長期的な関係を築きます。" },
+      ],
+      jobs: [
+        { title: "UI / UXデザイナー", type: "正社員", desc: "Webサイト・プロダクトのデザインを、戦略段階から担当いただきます。" },
+        { title: "フロントエンドエンジニア", type: "正社員", desc: "Next.js を中心に、デザインの意図を損なわない実装をお任せします。" },
+        { title: "ブランドストラテジスト", type: "正社員", desc: "リサーチからブランドの核を定義し、方針を設計いただきます。" },
+        { title: "デザイナー（インターン）", type: "インターン", desc: "実プロジェクトに関わりながら、デザインの基礎を実践的に学べます。" },
+      ],
+      benefits: [
+        "フルフレックス制度", "リモートワーク可", "書籍・学習費の補助", "最新機材の支給",
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

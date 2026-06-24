@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1568D8; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #14253D; background: #FFFFFF; overflow-x: hidden;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <header data-screen-label="Services Hero" style="background: #F4F7FA; padding: 150px 44px 90px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #8195A8; margin-bottom: 34px;">
+        <a href="むすび%20コーポレートサイト.dc.html" style="color: #8195A8; text-decoration: none;" style-hover="color: #1568D8;">HOME</a>
+        <span>/</span>
+        <span style="color: #14253D;">事業内容</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">SERVICE</span>
+      </div>
+      <h1 style="font-size: clamp(34px, 5.4vw, 76px); font-weight: 900; line-height: 1.3; letter-spacing: 0.01em;">
+        <span style="color: #14253D;">戦略から実装まで、</span><br>
+        <span style="color: #1568D8;">一気通貫で。</span>
+      </h1>
+      <p style="font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; line-height: 2; color: #5C6B7A; max-width: 680px; margin-top: 28px;">
+        ブランドの核を定義する戦略から、体験をかたちにするデザイン、堅牢な実装、そして公開後の成長まで。4つの領域を横断し、一貫した視点でプロジェクトを伴走します。
+      </p>
+    </div>
+  </header>
+
+  <!-- SERVICE DETAIL BLOCKS -->
+  <section style="padding: 60px 44px 40px; max-width: 1480px; margin: 0 auto;">
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 60px 0; border-top: 1px solid #E3E9F0;">
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+            <span style="font-size: 40px; font-weight: 900; color: #1568D8;">{{ s.no }}</span>
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #A6B3C2;">{{ s.en }}</span>
+          </div>
+          <h2 style="font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 20px;">{{ s.title }}</h2>
+          <p style="font-size: 16px; line-height: 2; color: #5C6B7A; margin-bottom: 28px;">{{ s.desc }}</p>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #14253D; margin-bottom: 14px;">主な提供内容</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="4">
+              <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #34465A;">
+                <span style="width: 7px; height: 7px; background: #1568D8; border-radius: 2px; flex: none;"></span>
+                {{ it }}
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="aspect-ratio: 5/4; border-radius: 20px; background-color: #EAF0F7; background-image: repeating-linear-gradient(135deg, rgba(21,104,216,0.06) 0 1px, transparent 1px 14px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 13px; font-weight: 500; color: #8195A8; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 100px;">[ {{ s.img }} ]</span>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background: #F4F7FA; padding: 100px 44px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">PROCESS</span>
+      </div>
+      <h2 style="font-size: clamp(28px, 3.6vw, 46px); font-weight: 900; margin-bottom: 50px;">プロジェクトの進め方</h2>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;">
+        <sc-for list="{{ process }}" as="p" hint-placeholder-count="5">
+          <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 30px 24px; min-height: 200px;">
+            <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #A6B3C2; margin-bottom: 18px;">STEP {{ p.no }}</div>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">{{ p.title }}</h3>
+            <p style="font-size: 13px; line-height: 1.85; color: #5C6B7A;">{{ p.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteCTA" hint-size="100%,520px"></dc-import>
+  <dc-import name="SiteFooter" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { no: "01", en: "STRATEGY", title: "ブランド戦略", img: "strategy image", desc: "リサーチとインタビューから事業の核を定義し、ブランドの言葉と方針を設計します。意思決定の軸となる一貫した指針をつくり、すべての施策の土台を築きます。", items: ["ブランドリサーチ / 市場分析", "ブランドコンセプト定義", "ネーミング / タグライン開発", "ブランドガイドライン策定"] },
+        { no: "02", en: "DESIGN", title: "デジタルデザイン", img: "design image", desc: "Webサイト、アプリ、プロダクトのUI/UX。美しさと使いやすさを両立し、ブランドの世界観を記憶に残る体験へと翻訳します。", items: ["UI / UXデザイン", "アートディレクション", "デザインシステム構築", "プロトタイピング"] },
+        { no: "03", en: "ENGINEERING", title: "開発・実装", img: "engineering image", desc: "高速で堅牢なフロントエンドからヘッドレスCMSの構築まで。デザインの意図を一切損なわない、確かな実装をお届けします。", items: ["フロントエンド開発", "ヘッドレスCMS構築", "Next.js / Webflow", "パフォーマンス最適化"] },
+        { no: "04", en: "GROWTH", title: "グロース支援", img: "growth image", desc: "公開はゴールではなくスタートです。データに基づく改善と運用で、ブランドの成長に長く伴走します。", items: ["アクセス解析 / 効果測定", "A/Bテスト設計", "コンテンツ運用支援", "保守 / 改善提案"] },
+      ],
+      process: [
+        { no: "01", title: "ヒアリング", desc: "課題と目指す姿を丁寧に伺い、プロジェクトのゴールを共有します。" },
+        { no: "02", title: "戦略・設計", desc: "リサーチをもとに方針を定義し、体験の全体像を設計します。" },
+        { no: "03", title: "デザイン", desc: "ブランドを体現するビジュアルとUIを具体化していきます。" },
+        { no: "04", title: "開発・実装", desc: "デザインを損なわない堅牢なかたちで実装します。" },
+        { no: "05", title: "公開・改善", desc: "公開後もデータを見ながら継続的に成長を支援します。" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

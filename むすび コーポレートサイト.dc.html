@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FFFFFF; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  ::selection { background: #1568D8; color: #FFFFFF; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#F4F7FA"/>
+    <rect x="30" y="30" width="28" height="28" rx="4" fill="#1568D8"/>
+    <rect x="50" y="50" width="20" height="20" rx="3" fill="#E5B23C"/>
+  </svg>
+</template>
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #14253D; background: #FFFFFF; overflow-x: hidden;">
+
+  <!-- ===== NAV ===== -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 20px 44px; background: rgba(255,255,255,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #EDF1F6;">
+    <a href="#top" style="text-decoration: none; color: #14253D; display: flex; align-items: center; gap: 12px;">
+      <span style="position: relative; width: 30px; height: 30px; display: inline-block; flex: none;">
+        <span style="position: absolute; left: 0; top: 0; width: 20px; height: 20px; background: #1568D8; border-radius: 3px;"></span>
+        <span style="position: absolute; right: 0; bottom: 0; width: 15px; height: 15px; background: #E5B23C; border-radius: 2px;"></span>
+      </span>
+      <span style="font-size: 23px; font-weight: 700; letter-spacing: 0.14em;">MUSUBI</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <a href="about.dc.html" style="text-decoration: none; color: #14253D; font-size: 15px; font-weight: 500;" style-hover="color: #1568D8;">私たちについて</a>
+      <a href="services.dc.html" style="text-decoration: none; color: #14253D; font-size: 15px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;" style-hover="color: #1568D8;">事業内容 <span style="font-size: 11px; color: #1568D8;">▾</span></a>
+      <a href="works.dc.html" style="text-decoration: none; color: #14253D; font-size: 15px; font-weight: 500;" style-hover="color: #1568D8;">実績一覧</a>
+      <a href="news.dc.html" style="text-decoration: none; color: #14253D; font-size: 15px; font-weight: 500;" style-hover="color: #1568D8;">お知らせ</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <a href="contact.dc.html" style="text-decoration: none; color: #1568D8; background: #FFFFFF; border: 1.5px solid #1568D8; font-size: 14px; font-weight: 700; padding: 12px 26px; border-radius: 100px; transition: background 0.2s, color 0.2s;" style-hover="background: #1568D8; color: #FFFFFF;">お問い合わせ</a>
+      <a href="recruit.dc.html" style="text-decoration: none; color: #FFFFFF; background: #1568D8; font-size: 14px; font-weight: 700; padding: 13px 24px; border-radius: 100px; display: inline-flex; align-items: center; gap: 14px; transition: background 0.2s;" style-hover="background: #0F4FA8;">
+        採用情報
+        <span style="opacity: 0.45; font-weight: 400;">|</span>
+        <span style="font-size: 13px;">↗</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="top" data-screen-label="Hero" style="padding: 158px 44px 0; max-width: 1480px; margin: 0 auto;">
+    <h1 style="font-weight: 900; line-height: 1.18; letter-spacing: 0.01em; margin-bottom: 44px; animation: riseIn 0.7s ease both;">
+      <span style="display: block; font-size: clamp(32px, 7vw, 94px); white-space: nowrap; color: #14253D;">ブランドの「本質」を、</span>
+      <span style="display: block; font-size: clamp(32px, 7vw, 94px); white-space: nowrap; color: #1568D8;">デジタルでかたちにする。</span>
+    </h1>
+    <p style="font-size: clamp(17px, 1.6vw, 22px); font-weight: 500; line-height: 1.85; color: #5C6B7A; margin-bottom: 60px; animation: riseIn 0.85s ease 0.1s both;">
+      戦略から実装、その先の成長まで。<br>
+      ブランドを知り尽くした <span style="color: #14253D; font-weight: 700;">MUSUBI</span> が、企業の価値をアップデート。
+    </p>
+
+    <!-- hero visual (full-width, rounded) -->
+    <div style="height: clamp(320px, 46vw, 620px); border-radius: 24px; position: relative; overflow: hidden; background-color: #EAF0F7; background-image: repeating-linear-gradient(135deg, rgba(21,104,216,0.06) 0 1px, transparent 1px 14px); animation: riseIn 1s ease 0.18s both; display: flex; align-items: center; justify-content: center;">
+      <span style="font-size: 13px; font-weight: 500; color: #8195A8; background: rgba(255,255,255,0.9); padding: 9px 18px; border-radius: 100px;">[ hero visual — メインビジュアル / 横長 ]</span>
+    </div>
+  </header>
+
+  <!-- ===== STATEMENT (centered philosophy) ===== -->
+  <section data-screen-label="Statement" style="padding: 130px 44px 120px; max-width: 1000px; margin: 0 auto; text-align: center;">
+    <div style="display: inline-flex; gap: 5px; margin-bottom: 40px;">
+      <span style="width: 13px; height: 13px; background: #1568D8; border-radius: 2px;"></span>
+      <span style="width: 13px; height: 13px; background: #E5B23C; border-radius: 2px;"></span>
+    </div>
+    <h2 style="font-weight: 900; font-size: clamp(30px, 4.6vw, 64px); line-height: 1.45; letter-spacing: 0.01em;">
+      <span style="color: #14253D;">本質を知るからこそ、</span><br>
+      <span style="color: #1568D8;">提供できる価値</span><span style="color: #14253D;">がある。</span>
+    </h2>
+    <div style="width: 56px; height: 2px; background: #CBD6E2; margin: 48px auto;"></div>
+    <p style="font-size: clamp(15px, 1.4vw, 19px); font-weight: 500; line-height: 2.1; color: #5C6B7A;">
+      ただデザインするだけ、ただ作るだけではありません。<br>
+      ブランドの本質を理解している私たちだからこそ、<br>
+      培った経験と最新のテクノロジーを掛け合わせた<br>
+      最適なソリューションを提案できます。
+    </p>
+    <a href="about.dc.html" style="display: inline-flex; align-items: center; gap: 22px; margin-top: 56px; text-decoration: none; color: #1568D8; background: #FFFFFF; border: 1.5px solid #1568D8; font-size: 15px; font-weight: 700; padding: 18px 40px; border-radius: 100px; transition: background 0.2s, color 0.2s;" style-hover="background: #1568D8; color: #FFFFFF;">
+      会社案内はこちら
+      <span style="opacity: 0.5; font-weight: 400;">|</span>
+      <span>→</span>
+    </a>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" data-screen-label="Services" style="background: #F4F7FA; padding: 110px 44px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="margin-bottom: 60px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+          <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+          <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+          <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">SERVICE</span>
+        </div>
+        <h2 style="font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: 0.01em;">事業内容</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+          <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 18px; padding: 44px 40px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; transition: box-shadow 0.25s, transform 0.25s;" style-hover="box-shadow: 0 16px 40px rgba(20,37,61,0.08); transform: translateY(-4px);">
+            <div>
+              <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px;">
+                <span style="font-size: 30px; font-weight: 900; color: #1568D8; letter-spacing: 0.02em;">{{ s.no }}</span>
+                <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #A6B3C2;">{{ s.en }}</span>
+              </div>
+              <h3 style="font-size: 25px; font-weight: 700; margin-bottom: 16px;">{{ s.title }}</h3>
+              <p style="font-size: 15px; line-height: 1.95; color: #5C6B7A; max-width: 460px;">{{ s.desc }}</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;">
+              <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="3">
+                <span style="font-size: 12px; font-weight: 500; color: #1568D8; background: #EAF1FB; border-radius: 100px; padding: 6px 14px;">{{ t }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKS ===== -->
+  <section id="works" data-screen-label="Works" style="padding: 110px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 56px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+          <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+          <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+          <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">WORKS</span>
+        </div>
+        <h2 style="font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: 0.01em;">実績一覧</h2>
+      </div>
+      <a href="works.dc.html" style="font-size: 14px; font-weight: 700; color: #1568D8; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid #1568D8; padding: 13px 26px; border-radius: 100px; transition: background 0.2s, color 0.2s;" style-hover="background: #1568D8; color: #FFFFFF;">すべての実績を見る →</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 44px 36px;">
+      <sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+        <a href="work-detail.dc.html" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+          <div style="height: 330px; border-radius: 18px; overflow: hidden; position: relative; background-color: #EAF0F7; background-image: repeating-linear-gradient(135deg, rgba(21,104,216,0.06) 0 1px, transparent 1px 14px); display: flex; align-items: center; justify-content: center; transition: transform 0.35s ease, box-shadow 0.35s ease;" style-hover="transform: translateY(-6px); box-shadow: 0 20px 44px rgba(20,37,61,0.12);">
+            <span style="font-size: 13px; font-weight: 500; color: #8195A8;">[ {{ w.img }} ]</span>
+            <span style="position: absolute; top: 18px; left: 20px; font-size: 12px; font-weight: 700; color: #FFFFFF; background: #1568D8; padding: 5px 12px; border-radius: 100px;">{{ w.year }}</span>
+          </div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 22px; gap: 16px;">
+            <h3 style="font-size: 21px; font-weight: 700;">{{ w.title }}</h3>
+            <span style="font-size: 13px; font-weight: 700; color: #1568D8; white-space: nowrap;">{{ w.cat }}</span>
+          </div>
+          <p style="font-size: 14px; color: #5C6B7A; margin-top: 7px;">{{ w.client }}</p>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / STATS ===== -->
+  <section id="about" data-screen-label="About" style="background: #F4F7FA; padding: 110px 44px;">
+    <div style="max-width: 1480px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+          <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+          <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+          <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">ABOUT</span>
+        </div>
+        <h2 style="font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: 0.01em; line-height: 1.35; margin-bottom: 30px;">「つなぐ」を起点に、<br>価値を未来へ。</h2>
+        <p style="font-size: 17px; line-height: 2; color: #34465A; margin-bottom: 22px; font-weight: 500;">
+          むすびは、戦略・デザイン・テクノロジーを横断するブランド・デジタルスタジオです。事業の本質を見極め、人の記憶に残る体験へと翻訳します。
+        </p>
+        <p style="font-size: 15px; line-height: 2; color: #5C6B7A; margin-bottom: 40px;">
+          少人数だからこそ、戦略から実装までを分断せず、一貫した視点でプロジェクトを伴走します。流行を追うのではなく、10年先も色褪せない確かなものづくりを大切にしています。
+        </p>
+        <a href="about.dc.html" style="display: inline-flex; align-items: center; gap: 18px; text-decoration: none; color: #1568D8; background: #FFFFFF; border: 1.5px solid #1568D8; font-size: 15px; font-weight: 700; padding: 16px 34px; border-radius: 100px; transition: background 0.2s, color 0.2s;" style-hover="background: #1568D8; color: #FFFFFF;">
+          私たちのストーリー <span style="opacity: 0.5; font-weight: 400;">|</span> <span>→</span>
+        </a>
+      </div>
+
+      <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+          <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 36px 30px;">
+            <div style="font-size: 56px; font-weight: 900; line-height: 1; color: #14253D; letter-spacing: 0.01em;">{{ st.value }}<span style="font-size: 24px; color: #1568D8;">{{ st.unit }}</span></div>
+            <div style="font-size: 14px; font-weight: 700; color: #34465A; margin-top: 16px;">{{ st.label }}</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: #A6B3C2; margin-top: 5px;">{{ st.en }}</div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ===== VOICE ===== -->
+  <sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
+  <section id="voice" data-screen-label="Voice" style="padding: 110px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="margin-bottom: 56px;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">VOICE</span>
+      </div>
+      <h2 style="font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: 0.01em;">お客様の声</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <sc-for list="{{ voices }}" as="v" hint-placeholder-count="3">
+        <figure style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 18px; padding: 38px 34px; display: flex; flex-direction: column; gap: 22px; height: 100%;">
+          <span style="font-size: 52px; line-height: 0.6; font-weight: 900; color: #1568D8;">&ldquo;</span>
+          <blockquote style="font-size: 16px; line-height: 2; color: #34465A; flex: 1; font-weight: 500;">{{ v.quote }}</blockquote>
+          <figcaption style="border-top: 1px solid #E3E9F0; padding-top: 18px;">
+            <div style="font-size: 15px; font-weight: 700;">{{ v.name }}</div>
+            <div style="font-size: 12px; color: #5C6B7A; margin-top: 4px;">{{ v.role }}</div>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ===== CTA ===== -->
+  <section id="contact" data-screen-label="Contact" style="background: #1568D8; color: #FFFFFF; padding: 120px 44px;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <div style="display: inline-flex; gap: 5px; margin-bottom: 32px;">
+        <span style="width: 13px; height: 13px; background: #FFFFFF; border-radius: 2px;"></span>
+        <span style="width: 13px; height: 13px; background: #E5B23C; border-radius: 2px;"></span>
+      </div>
+      <h2 style="font-weight: 900; font-size: clamp(34px, 5.6vw, 76px); line-height: 1.3; letter-spacing: 0.01em; margin-bottom: 28px;">
+        プロジェクトの<br>ご相談はこちらから。
+      </h2>
+      <p style="font-size: 16px; line-height: 1.95; color: rgba(255,255,255,0.9); max-width: 560px; margin: 0 auto 48px; font-weight: 500;">
+        ブランディング、Webサイト、プロダクト開発。構想段階のご相談も歓迎です。まずはお気軽にお問い合わせください。
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:hello@musubi.studio" style="background: #FFFFFF; color: #14253D; text-decoration: none; font-size: 15px; font-weight: 700; padding: 18px 40px; border-radius: 100px; display: inline-flex; align-items: center; gap: 14px; transition: transform 0.2s;" style-hover="transform: translateY(-3px);">
+          メールで相談する <span style="opacity: 0.4; font-weight: 400;">|</span> <span>→</span>
+        </a>
+        <a href="#top" style="background: transparent; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700; padding: 18px 40px; border-radius: 100px; border: 1.5px solid rgba(255,255,255,0.6); display: inline-flex; align-items: center; gap: 10px; transition: background 0.2s;" style-hover="background: rgba(255,255,255,0.12);">
+          資料をダウンロード
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background: #14253D; color: #A8B6C7; padding: 70px 44px 42px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+        <div style="max-width: 340px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+            <span style="position: relative; width: 28px; height: 28px; display: inline-block; flex: none;">
+              <span style="position: absolute; left: 0; top: 0; width: 19px; height: 19px; background: #4A90F0; border-radius: 3px;"></span>
+              <span style="position: absolute; right: 0; bottom: 0; width: 14px; height: 14px; background: #E5B23C; border-radius: 2px;"></span>
+            </span>
+            <span style="font-size: 21px; font-weight: 700; letter-spacing: 0.14em; color: #FFFFFF;">MUSUBI</span>
+          </div>
+          <p style="font-size: 13px; line-height: 1.9;">株式会社むすび<br>〒150-0001 東京都渋谷区神宮前0-0-0<br>MUSUBI Building 4F</p>
+        </div>
+        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #6E8197; margin-bottom: 18px;">MENU</div>
+            <div style="display: flex; flex-direction: column; gap: 13px;">
+              <a href="about.dc.html" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">私たちについて</a>
+              <a href="services.dc.html" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">事業内容</a>
+              <a href="works.dc.html" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">実績一覧</a>
+              <a href="contact.dc.html" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">お問い合わせ</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #6E8197; margin-bottom: 18px;">SOCIAL</div>
+            <div style="display: flex; flex-direction: column; gap: 13px;">
+              <a href="#" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">Instagram</a>
+              <a href="#" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">X / Twitter</a>
+              <a href="#" style="color: #C9D4E0; text-decoration: none; font-size: 14px;" style-hover="color: #4A90F0;">note</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 26px; font-size: 12px; letter-spacing: 0.04em;">
+        <span>© 2026 MUSUBI Inc. All rights reserved.</span>
+        <span>Designed in Tokyo</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}, &quot;showStats&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}, &quot;showTestimonials&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showStats: this.props.showStats ?? true,
+      showTestimonials: this.props.showTestimonials ?? true,
+      services: [
+        { no: "01", en: "STRATEGY", title: "ブランド戦略", desc: "リサーチとインタビューから事業の核を定義し、ブランドの言葉と方針を設計します。意思決定の軸となる一貫した指針をつくります。", tags: ["リサーチ", "ブランド定義", "ネーミング", "ガイドライン"] },
+        { no: "02", en: "DESIGN", title: "デジタルデザイン", desc: "Webサイト、アプリ、プロダクトのUI/UX。美しさと使いやすさを両立し、記憶に残る体験へ翻訳します。", tags: ["UI / UX", "アートディレクション", "プロトタイプ"] },
+        { no: "03", en: "ENGINEERING", title: "開発・実装", desc: "高速で堅牢なフロントエンドからCMS構築まで。デザインの意図を損なわない確かな実装をお届けします。", tags: ["フロントエンド", "CMS", "Next.js"] },
+        { no: "04", en: "GROWTH", title: "グロース支援", desc: "公開はゴールではなくスタート。データに基づく改善と運用で、ブランドの成長に長く伴走します。", tags: ["分析", "A/Bテスト", "運用・保守"] },
+      ],
+      works: [
+        { img: "project image 01", year: "2025", title: "Kanade Rebrand", cat: "Branding", client: "株式会社カナデ — コーポレートリブランディング" },
+        { img: "project image 02", year: "2025", title: "TŌGEN EC Platform", cat: "Web / EC", client: "桃源株式会社 — D2Cブランドサイト構築" },
+        { img: "project image 03", year: "2024", title: "Liberta App", cat: "Product", client: "Liberta Inc. — モバイルアプリUIデザイン" },
+        { img: "project image 04", year: "2024", title: "Sora Campaign", cat: "Campaign", client: "Sora — プロダクトローンチサイト" },
+      ],
+      stats: [
+        { value: "120", unit: "+", label: "手がけたプロジェクト", en: "PROJECTS" },
+        { value: "48", unit: "", label: "パートナー企業", en: "CLIENTS" },
+        { value: "11", unit: "yr", label: "スタジオの歩み", en: "SINCE 2014" },
+        { value: "9", unit: "", label: "専門チームの仲間", en: "MEMBERS" },
+      ],
+      voices: [
+        { quote: "戦略から実装まで一気通貫で任せられ、私たちの言語化できていなかった想いまでかたちにしてくれました。事業の見え方が変わりました。", name: "田中 美咲", role: "株式会社カナデ / 代表取締役" },
+        { quote: "デザインの美しさだけでなく、数字にもしっかり向き合ってくれる。公開後の改善まで並走してくれる姿勢に信頼しています。", name: "佐藤 健", role: "桃源株式会社 / マーケティング部長" },
+        { quote: "少人数とは思えないスピードと品質。要望の一歩先を提案してくれるので、毎回ミーティングが楽しみでした。", name: "鈴木 涼介", role: "Liberta Inc. / プロダクトマネージャー" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

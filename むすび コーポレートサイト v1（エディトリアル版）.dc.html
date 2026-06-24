@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #F4F1EA; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  ::selection { background: #C2552B; color: #F4F1EA; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes lineGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+</style>
+</helmet>
+
+<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #17150F; background: #F4F1EA; overflow-x: hidden;">
+
+  <!-- ===== NAV ===== -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 22px 48px; background: rgba(244,241,234,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(23,21,15,0.08);">
+    <a href="#top" style="text-decoration: none; color: #17150F; display: flex; align-items: baseline; gap: 12px;">
+      <span style="font-family: 'Instrument Serif', serif; font-size: 26px; letter-spacing: 0.02em;">MUSUBI</span>
+      <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #6E6A5E; text-transform: uppercase;">Brand &amp; Digital</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 38px;">
+      <a href="#services" style="text-decoration: none; color: #17150F; font-size: 13px; letter-spacing: 0.04em; padding-bottom: 2px; border-bottom: 1px solid transparent;" style-hover="border-bottom-color: #C2552B; color: #C2552B;">事業内容</a>
+      <a href="#works" style="text-decoration: none; color: #17150F; font-size: 13px; letter-spacing: 0.04em; padding-bottom: 2px; border-bottom: 1px solid transparent;" style-hover="border-bottom-color: #C2552B; color: #C2552B;">実績</a>
+      <a href="#about" style="text-decoration: none; color: #17150F; font-size: 13px; letter-spacing: 0.04em; padding-bottom: 2px; border-bottom: 1px solid transparent;" style-hover="border-bottom-color: #C2552B; color: #C2552B;">会社情報</a>
+      <a href="#contact" style="text-decoration: none; color: #F4F1EA; background: #17150F; font-size: 13px; letter-spacing: 0.04em; padding: 11px 22px; border-radius: 100px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.25s;" style-hover="background: #C2552B;">
+        お問い合わせ
+        <span style="font-family: 'Space Mono', monospace;">→</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="top" data-screen-label="Hero" style="padding: 178px 48px 90px; max-width: 1500px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 38px; animation: riseIn 0.7s ease both;">
+      <span style="width: 7px; height: 7px; border-radius: 50%; background: #C2552B; display: inline-block;"></span>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.22em; color: #6E6A5E; text-transform: uppercase;">Tokyo-based creative studio — est. 2014</span>
+    </div>
+
+    <h1 style="font-weight: 400; letter-spacing: -0.01em; line-height: 0.98; margin-bottom: 40px; animation: riseIn 0.8s ease 0.05s both;">
+      <span style="display: block; font-family: 'Instrument Serif', serif; font-size: clamp(52px, 8.4vw, 132px); color: #17150F;">We shape <span style="font-style: italic; color: #C2552B;">brands</span></span>
+      <span style="display: block; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: clamp(34px, 5.4vw, 86px); letter-spacing: 0.01em; margin-top: 6px;">本質を、かたちにする。</span>
+    </h1>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px; animation: riseIn 0.9s ease 0.12s both;">
+      <p style="max-width: 540px; font-size: 17px; line-height: 1.9; color: #46433B;">
+        戦略・デザイン・テクノロジーを横断し、企業のブランド価値を未来へつなぐデジタルスタジオです。問いの設計から実装、その先の成長まで、一貫した体験をともにつくります。
+      </p>
+      <div style="display: flex; gap: 48px;">
+        <div>
+          <div style="font-family: 'Instrument Serif', serif; font-size: 44px; line-height: 1;">120<span style="font-size: 22px; color: #C2552B;">+</span></div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6A5E; margin-top: 6px; text-transform: uppercase;">Projects</div>
+        </div>
+        <div>
+          <div style="font-family: 'Instrument Serif', serif; font-size: 44px; line-height: 1;">11<span style="font-size: 22px; color: #C2552B;">yr</span></div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6A5E; margin-top: 6px; text-transform: uppercase;">Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero visual -->
+    <div style="margin-top: 64px; height: 460px; border-radius: 6px; position: relative; overflow: hidden; background-color: #E8E3D8; background-image: repeating-linear-gradient(135deg, rgba(23,21,15,0.05) 0 1px, transparent 1px 13px); animation: riseIn 1s ease 0.2s both; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8A8678; background: rgba(244,241,234,0.85); padding: 8px 16px; border-radius: 4px;">[ hero visual — メインビジュアル / 16:9 ]</span>
+      <span style="position: absolute; bottom: 22px; left: 24px; font-family: 'Space Mono', monospace; font-size: 11px; color: #8A8678; letter-spacing: 0.1em;">(scroll ↓)</span>
+    </div>
+  </header>
+
+  <!-- ===== MARQUEE / clients ===== -->
+  <section style="border-top: 1px solid rgba(23,21,15,0.1); border-bottom: 1px solid rgba(23,21,15,0.1); padding: 26px 48px; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 56px; flex-wrap: wrap; justify-content: center;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #8A8678; text-transform: uppercase;">Trusted by —</span>
+      <sc-for list="{{ clients }}" as="c" hint-placeholder-count="6">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 24px; color: #46433B; letter-spacing: 0.01em;">{{ c }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" data-screen-label="Services" style="padding: 120px 48px; max-width: 1500px; margin: 0 auto;">
+    <div style="display: flex; align-items: baseline; gap: 18px; margin-bottom: 64px;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #C2552B; letter-spacing: 0.1em;">(01)</span>
+      <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); letter-spacing: -0.01em;">What we do <span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: 0.5em; color: #6E6A5E;">／ 事業内容</span></h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(23,21,15,0.1); border: 1px solid rgba(23,21,15,0.1);">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+        <div style="background: #F4F1EA; padding: 48px 44px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; transition: background 0.3s;" style-hover="background: #EFEBE1;">
+          <div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 26px;">
+              <span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #C2552B; letter-spacing: 0.08em;">{{ s.no }}</span>
+              <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #8A8678; letter-spacing: 0.1em;">{{ s.en }}</span>
+            </div>
+            <h3 style="font-size: 27px; font-weight: 700; letter-spacing: 0.01em; margin-bottom: 18px;">{{ s.title }}</h3>
+            <p style="font-size: 15px; line-height: 1.85; color: #56524A; max-width: 460px;">{{ s.desc }}</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;">
+            <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="3">
+              <span style="font-size: 12px; letter-spacing: 0.04em; color: #56524A; border: 1px solid rgba(23,21,15,0.18); border-radius: 100px; padding: 5px 13px;">{{ t }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== WORKS (dark) ===== -->
+  <section id="works" data-screen-label="Works" style="background: #17150F; color: #F4F1EA; padding: 120px 48px;">
+    <div style="max-width: 1500px; margin: 0 auto;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 60px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #E08A5E; letter-spacing: 0.1em;">(02)</span>
+          <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); letter-spacing: -0.01em;">Selected work <span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: 0.5em; color: #A8A496;">／ 実績</span></h2>
+        </div>
+        <a href="#contact" style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A8A496; text-decoration: none; border-bottom: 1px solid rgba(244,241,234,0.3); padding-bottom: 3px;" style-hover="color: #E08A5E; border-bottom-color: #E08A5E;">VIEW ALL →</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 40px;">
+        <sc-for list="{{ works }}" as="w" hint-placeholder-count="4">
+          <a href="#contact" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+            <div style="height: 340px; border-radius: 5px; overflow: hidden; position: relative; background-color: #211E16; background-image: repeating-linear-gradient(135deg, rgba(244,241,234,0.06) 0 1px, transparent 1px 13px); display: flex; align-items: center; justify-content: center; transition: transform 0.4s ease;" style-hover="transform: translateY(-6px);">
+              <span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6E6A5E;">[ {{ w.img }} ]</span>
+              <span style="position: absolute; top: 18px; left: 20px; font-family: 'Space Mono', monospace; font-size: 11px; color: #8A8678; letter-spacing: 0.1em;">{{ w.year }}</span>
+            </div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 22px; gap: 16px;">
+              <h3 style="font-size: 22px; font-weight: 500;">{{ w.title }}</h3>
+              <span style="font-size: 13px; color: #A8A496; white-space: nowrap;">{{ w.cat }}</span>
+            </div>
+            <p style="font-size: 14px; color: #8A8678; margin-top: 6px; letter-spacing: 0.02em;">{{ w.client }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / STATS ===== -->
+  <section id="about" data-screen-label="About" style="padding: 120px 48px; max-width: 1500px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 18px; margin-bottom: 38px;">
+          <span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #C2552B; letter-spacing: 0.1em;">(03)</span>
+          <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); letter-spacing: -0.01em;">About us <span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: 0.5em; color: #6E6A5E;">／ 私たちについて</span></h2>
+        </div>
+        <p style="font-size: 18px; line-height: 2; color: #34312A; margin-bottom: 26px;">
+          むすびは、「つなぐ」を起点に活動するブランド・デジタルスタジオです。事業の本質を見極め、人の記憶に残る体験へと翻訳する。
+        </p>
+        <p style="font-size: 15px; line-height: 1.95; color: #56524A; margin-bottom: 40px;">
+          少人数だからこそ、戦略から実装までを分断せず、一貫した視点でプロジェクトを伴走します。流行を追うのではなく、10年先も色褪せない確かなものづくりを大切にしています。
+        </p>
+        <a href="#contact" style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 0.04em; color: #17150F; text-decoration: none; border-bottom: 1px solid #17150F; padding-bottom: 4px;" style-hover="color: #C2552B; border-bottom-color: #C2552B;">
+          私たちのストーリーを読む <span style="font-family: 'Space Mono', monospace;">→</span>
+        </a>
+      </div>
+
+      <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(23,21,15,0.1); border: 1px solid rgba(23,21,15,0.1);">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+          <div style="background: #F4F1EA; padding: 40px 34px;">
+            <div style="font-family: 'Instrument Serif', serif; font-size: 56px; line-height: 1; letter-spacing: -0.01em;">{{ st.value }}<span style="font-size: 24px; color: #C2552B;">{{ st.unit }}</span></div>
+            <div style="font-size: 13px; color: #56524A; margin-top: 14px; letter-spacing: 0.02em;">{{ st.label }}</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: #8A8678; margin-top: 4px; letter-spacing: 0.1em; text-transform: uppercase;">{{ st.en }}</div>
+          </div>
+        </sc-for>
+      </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
+  <section data-screen-label="Voice" style="background: #EDE8DD; padding: 110px 48px;">
+    <div style="max-width: 1500px; margin: 0 auto;">
+      <div style="display: flex; align-items: baseline; gap: 18px; margin-bottom: 60px;">
+        <span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #C2552B; letter-spacing: 0.1em;">(04)</span>
+        <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); letter-spacing: -0.01em;">Client voices <span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 500; font-size: 0.5em; color: #6E6A5E;">／ お客様の声</span></h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <sc-for list="{{ voices }}" as="v" hint-placeholder-count="3">
+          <figure style="background: #F4F1EA; border: 1px solid rgba(23,21,15,0.08); border-radius: 6px; padding: 38px 34px; display: flex; flex-direction: column; gap: 24px; height: 100%;">
+            <span style="font-family: 'Instrument Serif', serif; font-size: 48px; line-height: 0.6; color: #C2552B;">&ldquo;</span>
+            <blockquote style="font-size: 16px; line-height: 1.95; color: #34312A; flex: 1;">{{ v.quote }}</blockquote>
+            <figcaption style="border-top: 1px solid rgba(23,21,15,0.1); padding-top: 18px;">
+              <div style="font-size: 14px; font-weight: 700;">{{ v.name }}</div>
+              <div style="font-size: 12px; color: #6E6A5E; margin-top: 3px;">{{ v.role }}</div>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ===== CTA ===== -->
+  <section id="contact" data-screen-label="Contact" style="background: #C2552B; color: #F7EFE8; padding: 130px 48px;">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,239,232,0.75);">Let's make something — 一緒につくりましょう</span>
+      <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(42px, 7vw, 100px); line-height: 1.02; letter-spacing: -0.01em; margin: 28px 0 22px;">
+        プロジェクトの<br><span style="font-style: italic;">ご相談はこちらから。</span>
+      </h2>
+      <p style="font-size: 16px; line-height: 1.85; color: rgba(247,239,232,0.88); max-width: 560px; margin: 0 auto 48px;">
+        ブランディング、Webサイト、プロダクト開発。構想段階のご相談も歓迎です。まずはお気軽にお問い合わせください。
+      </p>
+      <div style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:hello@musubi.studio" style="background: #17150F; color: #F4F1EA; text-decoration: none; font-size: 15px; letter-spacing: 0.04em; padding: 18px 40px; border-radius: 100px; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.25s;" style-hover="transform: translateY(-3px);">
+          メールで相談する <span style="font-family: 'Space Mono', monospace;">→</span>
+        </a>
+        <a href="#top" style="background: transparent; color: #F7EFE8; text-decoration: none; font-size: 15px; letter-spacing: 0.04em; padding: 18px 40px; border-radius: 100px; border: 1px solid rgba(247,239,232,0.55); display: inline-flex; align-items: center; gap: 10px;" style-hover="background: rgba(247,239,232,0.12);">
+          資料をダウンロード
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background: #17150F; color: #A8A496; padding: 70px 48px 44px;">
+    <div style="max-width: 1500px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(244,241,234,0.12);">
+        <div style="max-width: 320px;">
+          <div style="font-family: 'Instrument Serif', serif; font-size: 30px; color: #F4F1EA; letter-spacing: 0.02em;">MUSUBI</div>
+          <p style="font-size: 13px; line-height: 1.8; margin-top: 16px;">株式会社むすび<br>〒150-0001 東京都渋谷区神宮前0-0-0<br>MUSUBI Building 4F</p>
+        </div>
+        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6A5E; text-transform: uppercase; margin-bottom: 18px;">Menu</div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="#services" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">事業内容</a>
+              <a href="#works" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">実績</a>
+              <a href="#about" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">会社情報</a>
+              <a href="#contact" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">お問い合わせ</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6E6A5E; text-transform: uppercase; margin-bottom: 18px;">Social</div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="#" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">Instagram</a>
+              <a href="#" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">X / Twitter</a>
+              <a href="#" style="color: #D6D2C6; text-decoration: none; font-size: 14px;" style-hover="color: #E08A5E;">note</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 28px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.08em;">
+        <span>© 2026 MUSUBI Inc. All rights reserved.</span>
+        <span>Designed in Tokyo</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}, &quot;showStats&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}, &quot;showTestimonials&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showStats: this.props.showStats ?? true,
+      showTestimonials: this.props.showTestimonials ?? true,
+      clients: ["AOYAMA", "Kanade", "TŌGEN", "Liberta", "MEGURO Co.", "Sora"],
+      services: [
+        { no: "01", en: "STRATEGY", title: "ブランド戦略", desc: "リサーチとインタビューから事業の核を定義し、ブランドの言葉と方針を設計します。意思決定の軸となる一貫した指針をつくります。", tags: ["リサーチ", "ブランド定義", "ネーミング", "ガイドライン"] },
+        { no: "02", en: "DESIGN", title: "デジタルデザイン", desc: "Webサイト、アプリ、プロダクトのUI/UX。美しさと使いやすさを両立し、記憶に残る体験へ翻訳します。", tags: ["UI / UX", "アートディレクション", "プロトタイプ"] },
+        { no: "03", en: "ENGINEERING", title: "開発・実装", desc: "高速で堅牢なフロントエンドからCMS構築まで。デザインの意図を損なわない確かな実装をお届けします。", tags: ["フロントエンド", "CMS", "Webflow / Next.js"] },
+        { no: "04", en: "GROWTH", title: "グロース支援", desc: "公開はゴールではなくスタート。データに基づく改善と運用で、ブランドの成長に長く伴走します。", tags: ["分析", "A/Bテスト", "運用・保守"] },
+      ],
+      works: [
+        { img: "project image 01", year: "2025", title: "Kanade Rebrand", cat: "Branding", client: "株式会社カナデ — コーポレートリブランディング" },
+        { img: "project image 02", year: "2025", title: "TŌGEN EC Platform", cat: "Web / EC", client: "桃源株式会社 — D2Cブランドサイト構築" },
+        { img: "project image 03", year: "2024", title: "Liberta App", cat: "Product", client: "Liberta Inc. — モバイルアプリUIデザイン" },
+        { img: "project image 04", year: "2024", title: "Sora Campaign", cat: "Campaign", client: "Sora — プロダクトローンチサイト" },
+      ],
+      stats: [
+        { value: "120", unit: "+", label: "手がけたプロジェクト", en: "Projects" },
+        { value: "48", unit: "", label: "パートナー企業", en: "Clients" },
+        { value: "11", unit: "yr", label: "スタジオの歩み", en: "Since 2014" },
+        { value: "9", unit: "", label: "専門チームの仲間", en: "Members" },
+      ],
+      voices: [
+        { quote: "戦略から実装まで一気通貫で任せられ、私たちの言語化できていなかった想いまでかたちにしてくれました。事業の見え方が変わりました。", name: "田中 美咲", role: "株式会社カナデ / 代表取締役" },
+        { quote: "デザインの美しさだけでなく、数字にもしっかり向き合ってくれる。公開後の改善まで並走してくれる姿勢に信頼しています。", name: "佐藤 健", role: "桃源株式会社 / マーケティング部長" },
+        { quote: "少人数とは思えないスピードと品質。要望の一歩先を提案してくれるので、毎回ミーティングが楽しみでした。", name: "鈴木 涼介", role: "Liberta Inc. / プロダクトマネージャー" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
