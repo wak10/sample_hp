@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1568D8; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #14253D; background: #FFFFFF; overflow-x: hidden;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <header data-screen-label="News Hero" style="background: #F4F7FA; padding: 150px 44px 80px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #8195A8; margin-bottom: 34px;">
+        <a href="むすび%20コーポレートサイト.html" style="color: #8195A8; text-decoration: none;" style-hover="color: #1568D8;">HOME</a>
+        <span>/</span>
+        <span style="color: #14253D;">お知らせ</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">NEWS</span>
+      </div>
+      <h1 style="font-size: clamp(34px, 5.4vw, 76px); font-weight: 900; line-height: 1.3; letter-spacing: 0.01em;">お知らせ</h1>
+    </div>
+  </header>
+
+  <section style="padding: 56px 44px 100px; max-width: 1100px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px;">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+        <span style="font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: 100px; border: 1.5px solid {{ c.border }}; color: {{ c.color }}; background: {{ c.bg }}; cursor: pointer;">{{ c.label }}</span>
+      </sc-for>
+    </div>
+
+    <div>
+      <sc-for list="{{ news }}" as="n" hint-placeholder-count="6">
+        <a href="#" style="display: grid; grid-template-columns: 130px 110px 1fr 24px; gap: 24px; align-items: center; padding: 26px 8px; border-top: 1px solid #E3E9F0; text-decoration: none; color: inherit; transition: background 0.2s;" style-hover="background: #F4F7FA;">
+          <span style="font-size: 14px; font-weight: 700; color: #5C6B7A; letter-spacing: 0.04em;">{{ n.date }}</span>
+          <span style="font-size: 12px; font-weight: 700; color: #1568D8; background: #EAF1FB; border-radius: 100px; padding: 6px 0; text-align: center;">{{ n.cat }}</span>
+          <span style="font-size: 16px; font-weight: 500; line-height: 1.6;">{{ n.title }}</span>
+          <span style="font-size: 16px; color: #1568D8; text-align: center;">→</span>
+        </a>
+      </sc-for>
+      <div style="border-top: 1px solid #E3E9F0;"></div>
+    </div>
+
+    <!-- pagination -->
+    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 54px;">
+      <span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #1568D8; color: #FFFFFF; font-size: 14px; font-weight: 700;">1</span>
+      <span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1.5px solid #CBD9EC; color: #14253D; font-size: 14px; font-weight: 700; cursor: pointer;">2</span>
+      <span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1.5px solid #CBD9EC; color: #14253D; font-size: 14px; font-weight: 700; cursor: pointer;">3</span>
+      <span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1.5px solid #CBD9EC; color: #1568D8; font-size: 14px; cursor: pointer;">→</span>
+    </div>
+  </section>
+
+  <dc-import name="SiteCTA" hint-size="100%,520px"></dc-import>
+  <dc-import name="SiteFooter" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      cats: [
+        { label: "すべて", color: "#FFFFFF", bg: "#1568D8", border: "#1568D8" },
+        { label: "お知らせ", color: "#1568D8", bg: "#FFFFFF", border: "#CBD9EC" },
+        { label: "実績", color: "#1568D8", bg: "#FFFFFF", border: "#CBD9EC" },
+        { label: "メディア", color: "#1568D8", bg: "#FFFFFF", border: "#CBD9EC" },
+      ],
+      news: [
+        { date: "2026.06.10", cat: "お知らせ", title: "オフィス移転のお知らせ。渋谷・神宮前へ拠点を移しました。" },
+        { date: "2026.05.22", cat: "実績", title: "株式会社カナデのコーポレートリブランディング事例を公開しました。" },
+        { date: "2026.04.15", cat: "メディア", title: "デザイン専門メディアにて、当社のブランド戦略の取り組みが紹介されました。" },
+        { date: "2026.03.03", cat: "お知らせ", title: "2026年度 新卒採用エントリーの受付を開始しました。" },
+        { date: "2026.02.18", cat: "実績", title: "桃源株式会社のD2Cブランドサイトをリニューアル公開しました。" },
+        { date: "2026.01.09", cat: "お知らせ", title: "本年もどうぞよろしくお願いいたします。年始のご挨拶。" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

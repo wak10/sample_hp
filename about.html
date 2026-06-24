@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #1568D8; color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="font-family: 'Noto Sans JP', sans-serif; color: #14253D; background: #FFFFFF; overflow-x: hidden;">
+  <dc-import name="SiteNav" hint-size="100%,76px"></dc-import>
+
+  <!-- PAGE HERO -->
+  <header data-screen-label="About Hero" style="background: #F4F7FA; padding: 150px 44px 90px;">
+    <div style="max-width: 1480px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: #8195A8; margin-bottom: 34px;">
+        <a href="むすび%20コーポレートサイト.html" style="color: #8195A8; text-decoration: none;" style-hover="color: #1568D8;">HOME</a>
+        <span>/</span>
+        <span style="color: #14253D;">私たちについて</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">ABOUT</span>
+      </div>
+      <h1 style="font-size: clamp(34px, 5.4vw, 76px); font-weight: 900; line-height: 1.3; letter-spacing: 0.01em;">
+        <span style="color: #14253D;">「つなぐ」を起点に、</span><br>
+        <span style="color: #1568D8;">価値を未来へ。</span>
+      </h1>
+      <p style="font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; line-height: 2; color: #5C6B7A; max-width: 680px; margin-top: 28px;">
+        むすびは、戦略・デザイン・テクノロジーを横断するブランド・デジタルスタジオです。事業の本質を見極め、人の記憶に残る体験へと翻訳します。
+      </p>
+    </div>
+  </header>
+
+  <!-- MISSION / VALUES -->
+  <section style="padding: 100px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 50px;">
+      <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+      <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">VALUES</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
+        <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 18px; padding: 44px 38px;">
+          <div style="font-size: 28px; font-weight: 900; color: #1568D8; margin-bottom: 18px;">{{ v.no }}</div>
+          <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 14px;">{{ v.title }}</h3>
+          <p style="font-size: 15px; line-height: 1.95; color: #5C6B7A;">{{ v.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section style="background: #F4F7FA; padding: 100px 44px;">
+    <div style="max-width: 1480px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 70px; align-items: center;">
+      <div style="aspect-ratio: 4/5; border-radius: 20px; background-color: #EAF0F7; background-image: repeating-linear-gradient(135deg, rgba(21,104,216,0.06) 0 1px, transparent 1px 14px); display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 13px; font-weight: 500; color: #8195A8; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 100px;">[ 代表ポートレート ]</span>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+          <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+          <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+          <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">MESSAGE</span>
+        </div>
+        <h2 style="font-size: clamp(26px, 3.4vw, 42px); font-weight: 900; line-height: 1.45; margin-bottom: 28px;">流行ではなく、<br>10年先も色褪せないものを。</h2>
+        <p style="font-size: 16px; line-height: 2.1; color: #34465A; font-weight: 500; margin-bottom: 20px;">
+          私たちは「つなぐ」という言葉を大切にしています。事業と顧客、想いとかたち、いまと未来。その間にある距離を、デザインとテクノロジーで丁寧に埋めていくのが私たちの仕事です。
+        </p>
+        <p style="font-size: 15px; line-height: 2.1; color: #5C6B7A;">
+          少人数だからこそ、戦略から実装までを分断せず、一貫した視点で伴走できる。流行を追いかけるのではなく、ブランドの本質に根ざした、長く愛されるものづくりを追求し続けます。
+        </p>
+        <div style="margin-top: 32px; font-size: 15px;">
+          <span style="color: #5C6B7A;">代表取締役</span>
+          <span style="font-weight: 700; margin-left: 14px; font-size: 18px;">結城 連</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="padding: 100px 44px; max-width: 1480px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 38px 30px; text-align: center;">
+          <div style="font-size: 58px; font-weight: 900; line-height: 1; color: #14253D;">{{ st.value }}<span style="font-size: 24px; color: #1568D8;">{{ st.unit }}</span></div>
+          <div style="font-size: 14px; font-weight: 700; color: #34465A; margin-top: 16px;">{{ st.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section style="background: #F4F7FA; padding: 100px 44px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 50px;">
+        <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+        <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">HISTORY</span>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ history }}" as="h" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 130px 1fr; gap: 30px; padding: 26px 0; border-top: 1px solid #DEE6EE; align-items: baseline;">
+            <div style="font-size: 22px; font-weight: 900; color: #1568D8;">{{ h.year }}</div>
+            <p style="font-size: 15px; line-height: 1.9; color: #34465A;">{{ h.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY OVERVIEW -->
+  <section style="padding: 100px 44px; max-width: 1100px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 44px;">
+      <span style="width: 11px; height: 11px; background: #1568D8; border-radius: 2px;"></span>
+      <span style="width: 11px; height: 11px; background: #E5B23C; border-radius: 2px;"></span>
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.18em; color: #1568D8; margin-left: 4px;">COMPANY</span>
+    </div>
+    <div>
+      <sc-for list="{{ overview }}" as="o" hint-placeholder-count="6">
+        <div style="display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid #E3E9F0; align-items: baseline;">
+          <div style="font-size: 14px; font-weight: 700; color: #5C6B7A;">{{ o.k }}</div>
+          <div style="font-size: 15px; line-height: 1.8; color: #14253D;">{{ o.v }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <dc-import name="SiteCTA" hint-size="100%,520px"></dc-import>
+  <dc-import name="SiteFooter" hint-size="100%,440px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1024}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      values: [
+        { no: "01", title: "本質を見極める", desc: "表層の課題ではなく、その奥にある本当の問いを探します。リサーチと対話を起点に、ブランドの核を定義します。" },
+        { no: "02", title: "一貫してつくる", desc: "戦略・デザイン・開発を分断しません。少人数だからこそ、ひとつの視点で最後まで責任を持ってつくります。" },
+        { no: "03", title: "未来へつなぐ", desc: "流行ではなく、10年先も色褪せないものを。公開後の成長まで、長く伴走することを大切にしています。" },
+      ],
+      stats: [
+        { value: "120", unit: "+", label: "手がけたプロジェクト" },
+        { value: "48", unit: "", label: "パートナー企業" },
+        { value: "11", unit: "yr", label: "スタジオの歩み" },
+        { value: "9", unit: "", label: "専門チームの仲間" },
+      ],
+      history: [
+        { year: "2014", text: "東京・渋谷にて株式会社むすびを創業。ブランディングとWeb制作の二人チームとしてスタート。" },
+        { year: "2017", text: "デジタルプロダクトのUI/UXデザイン事業を本格化。スタートアップ支援の実績を重ねる。" },
+        { year: "2020", text: "エンジニアリングチームを内製化し、戦略から実装までの一気通貫体制を確立。" },
+        { year: "2023", text: "グロース支援事業を立ち上げ。公開後の運用・改善まで含めた長期パートナーシップを開始。" },
+        { year: "2025", text: "メンバー9名体制に。累計120件を超えるプロジェクトに携わる。" },
+      ],
+      overview: [
+        { k: "会社名", v: "株式会社むすび（MUSUBI Inc.）" },
+        { k: "設立", v: "2014年4月" },
+        { k: "代表取締役", v: "結城 連" },
+        { k: "所在地", v: "〒150-0001 東京都渋谷区神宮前0-0-0 MUSUBI Building 4F" },
+        { k: "事業内容", v: "ブランド戦略 / デジタルデザイン / 開発・実装 / グロース支援" },
+        { k: "従業員数", v: "9名（2025年12月現在）" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
